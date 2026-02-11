@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Items Example</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    input { padding: 8px; width: 300px; margin-bottom: 20px; }
+    li { margin: 5px 0; }
+  </style>
+</head>
+<body>
+
+<h2>Search Items</h2>
+<input type="text" id="searchBar" placeholder="Type to search..." onkeyup="searchItems()">
+
+<ul id="itemList">
+ <ul>
+          <li><a class="dropdown-item" href="royal palace.html">Royal Palace</a></li>
+          <li><a class="dropdown-item" href="khmer traditional clothing.html">Khmer traditional clothing</a></li>
+              <li><a class="dropdown-item" href="khmer folk games.html">Khmer folk games</a></li>
+              <li><a class="dropdown-item" href="famous dishes in cambodia.html">Famous dishes in cambodia</a></li>
+              <li><a class="dropdown-item" href="User managemen system.html">User managemen system</a></li>
+        
+</ul>
+
+<script>
+function searchItems() {
+  const input = document.getElementById('searchBar').value.toLowerCase();
+  const items = document.querySelectorAll('#itemList li');
+
+  items.forEach(item => {
+    if (item.textContent.toLowerCase().includes(input)) {
+      item.style.display = '';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cambodia</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- link style.css -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #f0f2f5;
+      margin: 0;
+    }
+
+    /* Navbar spacer */
+    .navbar-spacer {
+      height: 70px;
+    }
+
+    /* Card */
+    .user-card {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+      margin-top: 2rem;
+    }
+
+    .user-card h2 {
+      margin-bottom: 1.5rem;
+    }
+
+    .user-card input {
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+
+    .user-card button {
+      border-radius: 25px;
+      width: 100%;
+      padding: 0.75rem 0;
+    }
+
+    .table-container {
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+
+ <!-- ================= NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Cambodia</a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="video.html#video">Video</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="map.html">Map</a>
+        </li>
+
+       <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Menu</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="royal palace.html">Royal Palace</a></li>
+            <li><a class="dropdown-item" href="khmer traditional clothing.html">Khmer traditional clothing</a></li>
+              <li><a class="dropdown-item" href="khmer folk games.html">Khmer folk games</a></li>
+            <li><a class="dropdown-item" href="famous dishes in cambodia.html">Famous dishes in cambodia</a></li>
+            <li><a class="dropdown-item" href="User managemen system.html">User managemen system</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div class="navbar-spacer"></div>
+
+<!-- MAIN CARD -->
+<div class="container">
+  <div class="user-card mx-auto" style="max-width: 900px;">
+    <h2 class="text-center fw-bold">User Data Management</h2>
+
+    <!-- FORM -->
+    <input type="text" class="form-control" id="username" placeholder="Username">
+    <input type="text" class="form-control" id="province" placeholder="Province">
+    <input type="number" class="form-control" id="score" placeholder="Score">
+    <input type="email" class="form-control" id="email" placeholder="Email">
+    <button class="btn btn-primary mt-3" onclick="addStudent()">Save</button>
+
+    <!-- SEARCH -->
+    <input type="text" class="form-control mt-4 mb-3" id="searchInput" placeholder="Search..." onkeyup="searchStudent()">
+
+    <!-- TABLE -->
+    <div class="table-container">
+      <table class="table table-bordered table-hover text-center align-middle">
+        <thead class="table-dark">
+          <tr>
+            <th>#</th>
+            <th>Username</th>
+            <th>Province</th>
+            <th>Email</th>
+            <th>Score</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="studentTable"></tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<!--Footer-->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-about">
+        <h4>About Cambodia</h4>
+        <p>Discover the rich culture, amazing wildlife, and breathtaking landscapes of Cambodia. Your journey to the Kingdom of Wonder begins here.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a class="dropdown-item" href="royal palace.html">Royal Palace</a></li>
+              <li><a class="dropdown-item" href="khmer traditional clothing.html">Khmer traditional clothing</a></li>
+              <li><a class="dropdown-item" href="khmer folk games.html">Khmer folk games</a></li>
+              <li><a class="dropdown-item" href="famous dishes in cambodia.html">Famous dishes in cambodia</a></li>
+              <li><a class="dropdown-item" href="User managemen system.html">User managemen system</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Us</h4>
+        <p>Email: info@cambodiaexplore.com</p>
+        <p>Phone: +855 1234 5678</p>
+        <p>Address: Phnom Penh, Cambodia</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Cambodia Explore. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="main.js"></script>
+</body>
+</html>

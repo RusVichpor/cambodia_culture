@@ -1,0 +1,1214 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #f4f6f8;
+  overflow-x: hidden;
+  /* REMOVED: all padding-top that caused the white gap */
+}
+
+/*==================== 2. Navbar ====================*/
+.navbar {
+  background: linear-gradient(90deg, #4b6cb7, green) !important;
+  padding: 10px 20px;
+  border: none;
+  width: 100%;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-weight: 600;
+  color: #fff !important;
+}
+
+.navbar-nav .nav-link {
+  color: #e0e0e0 !important;
+  margin-right: 15px;
+  transition: 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #ffdd57 !important;
+}
+
+/* Search UI */
+.form-control {
+  border-radius: 20px;
+  border: 1px solid #fff;
+}
+
+.btn-outline-success {
+  border-radius: 20px;
+  border: 2px solid white !important;
+  color: white !important;
+  background-color: transparent;
+  font-weight: 500;
+}
+
+.btn-outline-success:hover {
+  background-color: #fff !important;
+  color: green !important;
+}
+
+/*==================== 3. Hero Section (Image Fix) ====================*/
+.hero {
+  height: 100vh;
+  background-image: url("images/bg-logo.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  
+}
+
+/* overlay ងងឹតអោយអក្សរមើលច្បាស់ */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: black(0, 0, 0, 0.45);
+}
+
+.hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero-content p {
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 36px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+}
+/*============= map-logo ==============*/
+/* Hero Section 2 */
+.hero-2 {
+  position: relative;
+  padding: 60px 20px;
+  background-color: #f4f6f8;
+}
+
+.hero-2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7); /* overlay សរាប់លើ background */
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-2-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.hero-2-image {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: flex-start;
+  background-color: #fff;      /* ផ្ទាំងរូបពណ៌ស */
+  padding: 10px;               /* បន្ថែមចន្លោះជុំវិញរូប */
+  border-radius: 10px;         /* ជុំរាងមូល */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* ស្រមោលទន់ */
+}
+
+.hero-2-image img {
+  max-width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.hero-2-text {
+  flex: 1;
+  min-width: 300px;
+  padding-left: 40px;
+}
+
+.hero-2-text h2 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 15px;
+}
+
+.hero-2-text p {
+  font-size: 18px;
+  color: #555;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .hero-2-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .hero-2-text {
+    padding-left: 0;
+    text-align: center;
+    margin-top: 0;
+  }
+  
+  .hero-2-image {
+    justify-content: center;
+    padding: 0;
+    box-shadow: none;
+    background-color: transparent;
+  }
+}
+/*=========== Flower-cambodia ==========*/
+.flower-section {
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  text-align: center;
+}
+
+.flower-section h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.flower-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.flower-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.flower-card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 200px;
+}
+
+.flower-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .flower-gallery {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .flower-card {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+/*================ Food-Cambodia ===============*/
+.food-section {
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  text-align: center;
+}
+
+.food-section h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.food-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.food-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.food-card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 200px;
+}
+
+.food-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .food-gallery {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .food-card {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+/*=================== Tree-cambodia ================*/
+.tree-section {
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  text-align: center;
+}
+
+.tree-section h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.tree-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.tree-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.tree-card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 200px;
+}
+
+.tree-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .tree-gallery {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .tree-card {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+.tree-card p.tree-caption {
+  margin: 10px 0 15px;
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+}
+/*=============fruit-cambodia =========*/
+.fruit-section {
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  text-align: center;
+}
+
+.fruit-section h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.fruit-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.fruit-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.fruit-card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 200px;
+}
+
+.fruit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+/* Text / caption */
+.fruit-card p.fruit-caption {
+  margin: 10px 0 15px;
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .fruit-gallery {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .fruit-card {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+.animals-section {
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  text-align: center;
+}
+
+.animals-section h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.animals-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.animals-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.animals-card img {
+  width:100%;
+  display: block;
+  object-fit: cover;
+  height: 200px;
+}
+
+.animals-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+/* Text / caption */
+.animals-card p.animals-caption {
+  margin: 10px 0 15px;
+  font-size: 16px;
+  color: #555;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .animals-gallery {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .animals-card {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+/*================ conclution ==================*/
+.conclusion-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.conclusion-section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #222;
+  text-transform: capitalize;
+}
+
+/* Layout content */
+.conclusion-content {
+  display: flex;
+  flex-direction: column;   /* ដាក់អក្សរ និងរូបជួរឈរនៅលើគ្នា */
+  align-items: center;      /* កណ្តាលទាំងអក្សរនិងរូប */
+  gap: 20px;                /* ចន្លោះរវាងអក្សរ និងរូប */
+  flex-wrap: nowrap;
+  text-align: center;       /* កណ្តាលអក្សរ */
+}
+
+.conclusion-text {
+  max-width: 700px;
+}
+
+.conclusion-image {
+  width: 600px;             /* ទំហំរូបធំបន្តិច */
+  border-radius: 15px;
+  overflow: hidden;
+  filter: brightness(100%);  /* បង្រួមពន្លឺរូបឲ្យវែងបន្តិច */
+}
+
+.conclusion-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .conclusion-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .conclusion-text {
+    text-align: center;
+  }
+
+  .conclusion-image {
+    justify-content: center;
+    margin-top: 20px;
+  }
+}
+/*=================== Footer ==================*/
+.site-footer {
+  background-color: #2a3e4c;
+  color: #f0f0f0;
+  padding: 40px 20px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.site-footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-about,
+.footer-links,
+.footer-contact {
+  flex: 1 1 280px;
+  min-width: 250px;
+}
+
+.footer-about h4,
+.footer-links h4,
+.footer-contact h4 {
+  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #ffdd57;
+}
+
+.footer-about p,
+.footer-contact p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #ddd;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #ffdd57;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/*===================== Royal-Palace =================*/
+.royal-palace {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* fullscreen */
+  min-height: 500px;
+  background-image: url('images/royal-logo.jpg'); /* ផ្លូវរូបភាពរបស់អ្នក */
+  background-size: cover; /* បំពេញទាំង width និង height */
+  background-position: center center; /* center horizontally & vertically */
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  color: white;
+}
+
+/* Overlay dim effect */
+.royal-palace::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.4); /* dim overlay */
+  z-index: 1;
+}
+
+/* Content overlay */
+.royal-palace-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+.royal-palace-content h1 {
+  font-size: 4vw;
+  font-weight: bold;
+  margin: 0;
+  line-height: 1.2;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.royal-palace-content p {
+  font-size: 2vw;
+  margin-top: 10px;
+  text-shadow: 1px 1px 6px rgba(0,0,0,0.5);
+}
+
+/* Responsive tweaks */
+@media (max-width: 1200px) {
+  .royal-palace-content h1 { font-size: 5vw; }
+  .royal-palace-content p { font-size: 2.5vw; }
+}
+
+@media (max-width: 992px) {
+  .royal-palace-content h1 { font-size: 6vw; }
+  .royal-palace-content p { font-size: 3vw; }
+}
+
+@media (max-width: 768px) {
+  .royal-palace {
+    height: 60vh;
+  }
+  .royal-palace-content h1 { font-size: 7vw; }
+  .royal-palace-content p { font-size: 4vw; }
+}
+
+@media (max-width: 480px) {
+  .royal-palace {
+    height: 50vh;
+  }
+  .royal-palace-content h1 { font-size: 8vw; }
+  .royal-palace-content p { font-size: 5vw; }
+}
+
+/*=================== Royal-family =====================*/
+
+/* Family Royal circle cards */
+.family-gallery .family-card {
+  overflow: hidden;
+  border-radius: 50%; /* make circle */
+  width: 100%;
+  aspect-ratio: 1/1; /* square container to make circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.family-gallery .family-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%; /* circle image */
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.family-gallery .family-card:hover img {
+  transform: scale(1.1);
+}
+
+.family-gallery .family-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .family-gallery .family-card {
+    aspect-ratio: 1/1;
+  }
+}
+
+@media (max-width: 480px) {
+  .family-gallery .family-card {
+    aspect-ratio: 1/1;
+  }
+}
+/*==================== Nation Relagion King ==================*/
+/* Rectangle cards for Nation Religion King */
+.nrk-gallery .nrk-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px; /* rounded corners */
+  width: 100%;
+  aspect-ratio: 4/3; /* rectangle shape */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nrk-gallery .nrk-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.nrk-gallery .nrk-card:hover img {
+  transform: scale(1.05);
+}
+
+.nrk-gallery .nrk-card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Overlay text */
+.nrk-gallery .card-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.nrk-gallery .card-overlay h5 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .nrk-gallery .nrk-card {
+    aspect-ratio: 4/3;
+  }
+  .nrk-gallery .card-overlay h5 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nrk-gallery .nrk-card {
+    aspect-ratio: 4/3;
+  }
+  .nrk-gallery .card-overlay h5 {
+    font-size: 0.9rem;
+  }
+}
+/*====================river=============*/
+.river-section {
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  text-align: center;
+}
+
+.river-section h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.river-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.river-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.river-card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 200px;
+}
+
+.river-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .river-gallery {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .river-card {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+/*=================== Place of worship ==============*/
+.place-section {
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  text-align: center;
+}
+
+.place-section h3 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #333;
+  text-transform: capitalize;
+}
+
+.place-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.place-card {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.place-card img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 200px;
+}
+
+.place-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .place-gallery {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .place-card {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+/*=============== Khmer traditional ciothing================*/
+
+
+body {
+  background: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+/* Title */
+.title {
+  text-align: center;
+  font-size: 36px;
+  margin-top: 60px;
+  margin-bottom: 15px;
+  color: #7a1f1f;
+}
+
+/* Wrapper */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Card */
+.info-card {
+  display: flex;
+  max-width: 1100px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Image */
+.info-image {
+  width: 45%;
+  height: 420px;              /* ទំហំដូចអ្នកចង់បាន */
+  background: #111;           /* background ខ្មៅស្រាល */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;        /* ⭐ មិនកាត់រូប */
+}
+/* Text */
+.info-text {
+  width: 55%;
+  padding: 40px;
+}
+
+.info-text h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #7a1f1f;
+}
+
+.info-text p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .info-card {
+    flex-direction: column; /* រូបនៅលើអត្ថបទ */
+  }
+
+  .info-image {
+    width: 100%;
+    height: auto; /* រូបអាចខ្នាតស្វ័យប្រវត្តិ */
+    aspect-ratio: auto;
+  }
+
+  .info-text {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .info-text h2 {
+    font-size: 22px;
+  }
+
+  .info-text p {
+    font-size: 14px;
+  }
+}
+/*========================= khmer folk games ==========================*/
+body {
+  padding-top: 0px; /* ឲ្យ content ចុះក្រោម navbar */
+}
+
+/* ==============================
+   Section Title
+============================== */
+.folk-games-section {
+  text-align: center;
+  margin: 60px 0 40px 0;
+  
+}
+
+.section-title {
+  font-size: 36px;
+  color: #7a1f1f;
+  margin-bottom: 10px;
+}
+
+.section-line {
+  width: 150px;
+  height: 3px;
+  background-color: #7a1f1f;
+  margin: 0 auto;
+  border: none;
+  border-radius: 2px;
+}
+
+/* ==============================
+   Info Card
+============================== */
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.info-card {
+  display: flex;
+  max-width: 1000px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.info-image {
+  width: 75%;
+  overflow: hidden;
+}
+
+.info-image img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* មិនកាត់រូប */
+  display: block;
+}
+
+.info-text {
+  width: 55%;
+  padding: 40px;
+}
+
+.info-text h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #7a1f1f;
+}
+
+.info-text p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* ==============================
+   Responsive
+============================== */
+@media (max-width: 768px) {
+  .info-card {
+    flex-direction: column; /* រូបនៅលើអត្ថបទ */
+  }
+
+  .info-image {
+    width: 100%;
+  }
+
+  .info-text {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .info-text h2 {
+    font-size: 22px;
+  }
+
+  .info-text p {
+    font-size: 14px;
+  }
+}
+/*===================== famous dishes in cambodia ===================*/
+
+
+h1 {
+    text-align: center;
+    padding: 20px 0 20px 0; /* spacing ពី top */
+    color: #2c3e50;
+}
+
+hr {
+    width: 80px;
+    border: 2px solid #e74c3c;
+    margin: 0 auto 40px auto;
+}
+
+/* Container for cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px 50px 20px;
+}
+
+/* Individual card */
+.card {
+    background-color: white;
+    width: 300px; /* fixed width desktop */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Card Image */
+.card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;   /* fixed ratio for all images */
+    object-fit: cover;      /* fill card container, images same size */
+    display: block;
+}
+
+/* Card Content */
+.card-content {
+    padding: 20px;
+}
+
+.card-content h2 {
+    margin-top: 0;
+    color: #e74c3c;
+}
+
+.card-content p {
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .card {
+        width: 45%; /* 2 cards per row on tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 80%; /* stacked, responsive */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* full width on mobile */
+    }
+}

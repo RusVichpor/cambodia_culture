@@ -1,0 +1,29 @@
+/* Background styling */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+/* Custom spacing for the logo */
+.tracking-widest {
+    letter-spacing: 0.25rem;
+}
+
+/* Hand cursor for the toggle link */
+.cursor-pointer {
+    cursor: pointer;
+}
+
+/* Rounded corners for inputs */
+.form-control-lg {
+    border-radius: 0.75rem;
+}
+
+/* Button hover effect */
+.btn-primary {
+    transition: transform 0.2s ease, background-color 0.2s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    background-color: #0d58d1;
+}
